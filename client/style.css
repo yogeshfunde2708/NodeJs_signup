@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500&display=swap');
+
+nav {
+   
+    font-family: 'Playfair Display', serif;
+}
+
+main {
+    font-family: 'kanit', serif;
+    width: 70%;
+    margin: 60px auto;
+
+}
+
+/* label{
+    margin-left: 40px;
+} */
+
+
+table {
+    margin: 2px;
+
+
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+
+
+@media screen and (max-width: 350px) {
+  
+    main {
+        width: 100%;
+
+    }
+    h5{
+    font-size: 20px;
+    }
+}
