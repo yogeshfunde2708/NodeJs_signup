@@ -125,8 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
   
           id: updateGenderInput.dataset.id,
           gender: updateGenderInput.value,
-          male: updateGenderInput.checked,
-          female: updateGenderInput.checked,
           
           id: updatePasswodInput.dataset.id,
           password: updatePasswodInput.value,
