@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if(gender == "Male"){
     document.querySelector("#update-male").dataset.id = id;
     document.querySelector("#update-male").checked = true;
+   
   }else if(gender == "Female"){
    document.querySelector("#update-female").dataset.id = id;
     document.querySelector("#update-female").checked = true;
@@ -91,8 +92,16 @@ document.addEventListener("DOMContentLoaded", function () {
   updateBtn.onclick = function () {
     const updateNameInput = document.querySelector("#update-name-input");
     const updateEmailInput = document.querySelector("#update-email-input");
-    const updateGenderInput = document.querySelector("#update-male, #update-female");
-    console.log(updateGenderInput);
+    // const updateGenderInput = document.querySelector("#update-male, #update-female");
+    let gender;
+    if(document.querySelector("#update-male").checked = true){
+      gender = "Male";
+     
+    }else if(document.querySelector("#update-female").checked = true){
+      gender = "Female";
+    } 
+  
+    // console.log(updateGenderInput);
     const updatePasswodInput = document.querySelector("#update-password-input");
     const updateConfirmPasswordInput = document.querySelector("#update-confirm-password");
   
@@ -101,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return false;
     } else if (updateEmailInput.value == "") {
       alert("please enter update email");
-    } else if (!updateGenderInput) {
+    } else if (!gender) {
       alert("Please enter gender");
     } else if (updatePasswodInput.value == "") {
       alert("Please enter password");
@@ -123,9 +132,9 @@ document.addEventListener("DOMContentLoaded", function () {
           id: updateEmailInput.dataset.id,
           email: updateEmailInput.value,
   
-          id: updateGenderInput.dataset.id,
-          gender: updateGenderInput.value,
-          
+          // id: gender.dataset.id,
+          gender: gender,
+
           id: updatePasswodInput.dataset.id,
           password: updatePasswodInput.value,
   
@@ -141,29 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
   };
-  
-  // const addBtn = document.querySelector("#add-name-btn");
-  // addBtn.onclick = function () {
-  //   const nameInput = document.querySelector("#name-input");
-  //   const name = nameInput.value;
-  //   // nameInput.value = "";
-  //   // console.log(name);
-  //   if (nameInput.value == "") {
-  //     alert("please enter name");
-  //     return false;
-  //   } else {
-  //     fetch("http://localhost:5000/insert", {
-  //       headers: {
-  //         "Content-type": "application/json",
-  //       },
-  //       method: "POST",
-  //       body: JSON.stringify({ name: name }),
-  //     })
-  //       .then((response) => response.json())
-  //       .then((data) => insertRowIntoTable(data["data"]));
-  //   }
-  //   nameInput.value = "";
-  // };
+
   
   const addBtn = document.querySelector("#add-name-btn");
   addBtn.onclick = function () {
