@@ -1,6 +1,6 @@
 const mysql2 = require("mysql2");
 const dotenv = require("dotenv");
-// const Connection = require('mysql2/typings/mysql/lib/Connection');
+
 let instance = null;
 dotenv.config();
 
@@ -38,27 +38,6 @@ class dbService {
     }
   }
 
-  // async insertNewName(name) {
-  //   try {
-  //     const dateAdded = new Date();
-  //     const insertId = await new Promise((resolve, reject) => {
-  //       const query = "INSERT INTO names (name, date_added) VALUES (?, ?);";
-
-  //       connection.query(query, [name, dateAdded], (err, result) => {
-  //         if (err) reject(new Error(err.message));
-  //         resolve(result.insertId);
-  //       });
-  //     });
-  //     return {
-  //       id: insertId,
-  //       name: name,
-  //       dateAdded: dateAdded,
-  //     };
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-
   async insertNewDetail(email, name, gender, password, confirmpassword) {
     try {
       const dateAdded = new Date();
@@ -80,8 +59,8 @@ class dbService {
         email: email,
         name: name,
         gender: gender,
-        password:password,
-        confirmpassword:confirmpassword,
+        password: password,
+        confirmpassword: confirmpassword,
         dateAdded: dateAdded,
       };
     } catch (error) {
@@ -89,7 +68,6 @@ class dbService {
     }
   }
 
-  
   async deleteRowById(id) {
     try {
       id = parseInt(id, 10);
@@ -111,14 +89,17 @@ class dbService {
     try {
       id = parseInt(id, 10);
       const response = await new Promise((resolve, reject) => {
-        // const query = "UPDATE names SET name= ? WHERE id = ?";
+        const query =
+          "UPDATE names SET name = ?, email = ?,  gender = ?, password = ?, confirmpassword = ? WHERE id = ? ";
 
-        const query = "UPDATE names SET name = ?, email = ?,  gender = ?, password = ?, confirmpassword = ? WHERE id = ? ";
-
-        connection.query(query, [ name, email, gender, password, confirmpassword, id], (err, result) => {
-          if (err) reject(new Error(err.message));
-          resolve(result.affectedRows);
-        });
+        connection.query(
+          query,
+          [name, email, gender, password, confirmpassword, id],
+          (err, result) => {
+            if (err) reject(new Error(err.message));
+            resolve(result.affectedRows);
+          }
+        );
       });
       return response === 1 ? true : false;
     } catch (error) {
@@ -126,7 +107,6 @@ class dbService {
       return false;
     }
   }
-
 
   async searchByName(name) {
     try {
