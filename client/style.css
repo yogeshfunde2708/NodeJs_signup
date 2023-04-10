@@ -1,22 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur'); */
+
+body {
+    background-image: linear-gradient(-225deg, #b4ecdc 0%, #f475db 100%);
+    background-image: linear-gradient(to top, #20e6dc 0%, #f67aa1 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    opacity: .95;
+}
 
 nav {
-   
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
     font-family: 'Playfair Display', serif;
 }
 
 main {
+    /* background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%); */
+    
     font-family: 'kanit', serif;
-    width: 70%;
-    margin: 60px auto;
+    width:60%;
+    margin: 40px auto;
+    justify-content: space-between;
 
 }
+.card-body{
+    background-image: linear-gradient(-225deg, #b9ebdc 50%, #f0d4ea 50%);
 
+}
+/* .email{
+  margin-left: 40px;
+} */
+.text-center{
+    float: left;
+}
 
 table {
     margin: 2px;
-
-
 }
 
 table,
@@ -24,22 +44,28 @@ th,
 td {
     border-collapse: collapse;
     border: 1px solid black;
+    text-align: center;
 }
 
 th,
 td {
     padding: 5px;
+    text-align: center;
 }
 
-
+.p-3{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
 
 @media screen and (max-width: 350px) {
-  
+
     main {
         width: 100%;
 
     }
-    h5{
-    font-size: 20px;
+
+    h5 {
+        font-size: 20px;
     }
 }
