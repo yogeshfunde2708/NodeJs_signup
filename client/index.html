@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-   
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -17,7 +17,7 @@
 <body>
     <nav class="navbar navbar-expand-lg  fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">SignUp Form</a>
+            <a class="navbar-brand" href="#">Sign Up Form</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo"
                 aria-controls="navbarTogglerDemo" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,48 +44,63 @@
         </div>
     </nav>
     <main class="mb-2 text-white overflow-auto">
-        <form class="was-validated">
+        <form class="needs-validation " novalidate>
             <div class="card text-dark">
                 <div class="card-body">
                     <!-- <h2>Sign In</h2> -->
                     <div class="card-body row g-4">
                         <h2 class="text-center mt-3">Sign Up Here</h2>
                         <div class="col-md-6">
-                            <label class="email">Enter Email:</label>
+                            <label for="validationCustom01" class="form-label">Enter Email:</label>
                             <input class="form-control text-center  col-10 mx-auto " placeholder="Enter-Email"
                                 type="text" id="email-input" maxlength="30" required=""><br>
+                            <div class="invalid-feedback">
+                                Please enter Email
+                            </div>
                         </div>
                         <div class="col-md-6">
-                            <label>Enter Username:</label>
+                            <label for="validationCustom02" class="form-label">Enter Username:</label>
                             <input class="form-control text-center  col-10 mx-auto " placeholder="Enter-Username"
                                 type="text" id="name-input" maxlength="20" required=""><br>
+                            <div class="invalid-feedback">
+                                Please enter Username
+                            </div>
                         </div>
 
                         <!-- <form> -->
-                        <label class="text-center">Select gender:</label>
-                        <div class="form-check text-center mt-1">
-                              <input type="radio" class="form-check-input" id="male" name="gender" value="Male"
-                                required="" />  
-                            <label class="form-check-label" for="male">Male</label>
+                        <div>
+                            <label class="text-center">Select gender:</label>
+                            <div class="form-check text-center mt-1">
+                                  <input type="radio" class="form-check-input" id="male" name="gender" value="Male"
+                                    required="" />  
+                                <label class="form-check-label" for="male">Male</label>
+                            </div>
+                            <div class="form-check text-center mt-1">
+                                  <input type="radio" class="form-check-input" id="female" name="gender" value="Female"
+                                    required="" />  
+                                <label class="form-check-label" for="female">Female</label>
+                            </div>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                              </div>
                         </div>
-                        <div class="form-check text-center mt-1">
-                              <input type="radio" class="form-check-input" id="female" name="gender" value="Female"
-                                required="" />  
-                            <label class="form-check-label" for="female">Female</label>
-                        </div>
-
 
                         <!-- </form> -->
                         <div class="col-md-6 mt-1">
-                            <label>Enter Password:</label>
+                            <label for="validationCustom3 class=" form-label">Enter Password:</label>
                             <input class="form-control text-center col-10 mx-auto " placeholder="Password"
                                 type="password" id="password-input" maxlength="15" required="" />
-
+                            <div class="invalid-feedback">
+                                Please enter password
+                            </div>
                         </div>
                         <div class="col-md-6 mt-1">
-                            <label>Enter Confirm Password:</label>
+                            <label for="validationCustom4 class=" form-label">Enter Confirm Password:</label>
                             <input class="form-control text-center col-10 mx-auto " placeholder="Confirm-Password"
                                 type="password" id="confirm-password-input" maxlength="15" required="" />
+                            <div class="invalid-feedback">
+                                Please enter Confirm password
+                            </div>
                         </div><br>,<br>
 
                         <!-- <div class="col-12">
@@ -101,7 +116,7 @@
                             </div>
                         </div> -->
 
-                        <a href="#" id="add-name-btn" class="btn btn-primary mt-0">Sign Up</a><br>
+                        <a href="#" id="add-name-btn" class="btn btn-primary mt-0" type="submit">Sign Up</a><br>
                     </div>
                 </div>
             </div>
@@ -139,14 +154,14 @@
                         placeholder="update-name"><br>
                 </div>
 
-                <form>
-                    <label>Edit Gender:</label>
-                      <input type="radio" id="update-male" name="gender" value="Male" />  
-                    <label for="male">Male</label>
+                <!-- <form> -->
+                <label>Edit Gender:</label>
+                  <input type="radio" id="update-male" name="gender" value="Male" />  
+                <label for="male">Male</label>
 
-                      <input type="radio" id="update-female" name="gender" value="Female" />  
-                    <label for="female">Female</label><br />
-                </form>
+                  <input type="radio" id="update-female" name="gender" value="Female" />  
+                <label for="female">Female</label><br />
+                <!-- </form> -->
 
                 <div class="col-md-6">
                     <label>Edit Password:</label>
@@ -167,10 +182,7 @@
     <div class="card fixed-bottom text-center">
         <h5 class="p-3 text-dark">Featured</h5>
     </div>
-    <script src="index.js">
-
-
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
