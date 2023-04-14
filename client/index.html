@@ -42,7 +42,7 @@
                 </form>
             </div>
         </div>
-    </nav>
+    </nav><br><br>
     <main class="mb-2 text-white overflow-auto">
         <form class="needs-validation" novalidate>
             <div class="card text-dark">
@@ -52,16 +52,16 @@
                         <h2 class="text-center mt-3">Sign Up Here</h2>
                         <div class="col-md-6">
                             <label for="validationCustom01" class="form-label">Enter Email:</label>
-                            <input class="form-control col-10 mx-auto " placeholder="Enter-Email"
-                                type="text" id="email-input" maxlength="30" required=""><br>
+                            <input class="form-control col-10 mx-auto " placeholder="Enter-Email" type="text"
+                                id="email-input" maxlength="30" required=""><br>
                             <div class="invalid-feedback">
                                 Please enter Email
                             </div>
                         </div>
                         <div class="col-md-6">
                             <label for="validationCustom02" class="form-label">Enter Username:</label>
-                            <input class="form-control col-10 mx-auto " placeholder="Enter-Username"
-                                type="text" id="name-input" maxlength="20" required=""><br>
+                            <input class="form-control col-10 mx-auto " placeholder="Enter-Username" type="text"
+                                id="name-input" maxlength="20" required=""><br>
                             <div class="invalid-feedback">
                                 Please enter Username
                             </div>
@@ -82,26 +82,26 @@
                             </div>
                             <div class="invalid-feedback">
                                 Please select a valid state.
-                              </div>
+                            </div>
                         </div>
 
                         <!-- </form> -->
                         <div class="col-md-6 mt-1">
                             <label for="validationCustom3" class="form-label">Enter Password:</label>
-                            <input class="form-control col-10 mx-auto " placeholder="Password"
-                                type="password" id="password-input" maxlength="15" required="" />
+                            <input class="form-control col-10 mx-auto " placeholder="Password" type="password"
+                                id="password-input" maxlength="15" required="" />
                             <div class="invalid-feedback">
                                 Please enter password
                             </div>
                         </div>
                         <div class="col-md-6 mt-1">
-                            <label for="validationCustom4" class= "form-label">Enter Confirm Password:</label>
-                            <input class="form-control col-10 mx-auto " placeholder="Confirm-Password"
-                                type="password" id="confirm-password-input" maxlength="15" required="" />
+                            <label for="validationCustom4" class="form-label">Enter Confirm Password:</label>
+                            <input class="form-control col-10 mx-auto " placeholder="Confirm-Password" type="password"
+                                id="confirm-password-input" maxlength="15" required="" />
                             <div class="invalid-feedback">
                                 Please enter Confirm password
                             </div>
-                        </div><br>,<br>
+                        </div>
 
                         <!-- <div class="col-12">
                             <div class="form-check">
@@ -115,12 +115,13 @@
                                 </div>
                             </div>
                         </div> -->
-
-                        <a href="#" id="add-name-btn" class="btn btn-primary mt-0" type="submit">Sign Up</a><br>
+                        <div class="text-center">
+                            <a href="#" id="add-name-btn" class="btn btn-primary mt-0" type="submit">Sign Up</a><br>
+                        </div>
                     </div>
                 </div>
             </div>
-        </form>
+        </form><br><br>
         <div class="table-responsive">
             <table id="table" class="table table-dark table-bordered overflow-auto">
                 <thead>
@@ -136,48 +137,50 @@
                     <th>Delete</th>
                 </thead>
                 <tbody></tbody>
-
             </table>
-        </div>
+        </div><br><br>
 
-        <div class="card text-center text-dark row g-3" hidden id="update-row">
-            <div class="card-body row g-4">
-                <h2 class="mt-1">Edit Here</h2>
-                <div class="col-md-6">
-                    <label>Edit Email:</label>
-                    <input class="form-control gap-2 col-10 mx-auto " type="text" id="update-email-input"
-                        placeholder="update-email"><br>
-                </div>
-                <div class="col-md-6">
-                    <label>Edit Name:</label>
-                    <input class="form-control gap-2 col-10 mx-auto " type="text" id="update-name-input"
-                        placeholder="update-name"><br>
-                </div>
+        <div class="card text-dark row g-3" hidden id="update-row">
+            <div class="card text-dark">
+                <div class="card-body row g-4">
+                    <h2 class="mt-3 text-center">Edit Here</h2>
+                    <div class="col-md-6">
+                        <label>Edit Email:</label>
+                        <input class="form-control col-10 mx-auto " type="text" id="update-email-input"
+                            placeholder="update-email"><br>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Edit Name:</label>
+                        <input class="form-control col-10 mx-auto " type="text" id="update-name-input"
+                            placeholder="update-name"><br>
+                    </div>
 
-                <form>
-                <label>Edit Gender:</label>
-                  <input type="radio" id="update-male" name="gender" value="Male" />  
-                <label for="male">Male</label>
+                    <div>
+                        <label>Edit Gender:</label>
+                          <input type="radio" id="update-male" name="gender" value="Male" />  
+                        <label for="male">Male</label>
 
-                  <input type="radio" id="update-female" name="gender" value="Female" />  
-                <label for="female">Female</label><br />
-                </form>
+                          <input type="radio" id="update-female" name="gender" value="Female" />  
+                        <label for="female">Female</label><br />
+                    </div>
 
-                <div class="col-md-6">
-                    <label>Edit Password:</label>
-                    <input class="form-control gap-2 col-10 mx-auto " placeholder="Enter-Password"
-                        type="password" id="update-password-input" /><br>
+                    <div class="col-md-6">
+                        <label>Edit Password:</label>
+                        <input class="form-control col-10 mx-auto " placeholder="Enter-Password" type="password"
+                            id="update-password-input" /><br>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Edit Confirm Password:</label>
+                        <input class="form-control col-10 mx-auto " placeholder="Confirm-Password" type="password"
+                            id="update-confirm-password" /><br>
+                    </div>
+                    <div class="text-center">
+                        <a href="#" id="update-row-btn" class="btn btn-primary">Update</a>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <label>Edit Confirm Password:</label>
-                    <input class="form-control gap-2 col-10 mx-auto " placeholder="Confirm-Password"
-                        type="password" id="update-confirm-password" /><br>
-                </div>
-                <a href="#" id="update-row-btn" class="btn btn-primary">Update</a>
             </div>
         </div>
-    </main>
-    <br><br>
+    </main><br><br>
 
     <div class="card fixed-bottom text-center">
         <h5 class="p-3 text-dark">Featured</h5>
