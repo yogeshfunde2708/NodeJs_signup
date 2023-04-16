@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top ">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-2">
         <div class="container-fluid">
             <a class="navbar-brand " href="#">Sign Up Form</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo"
@@ -49,7 +49,7 @@
                 <div class="card-body">
                     <!-- <h2>Sign In</h2> -->
                     <div class="card-body row g-4 ">
-                        <h2 class="text-center mt-3">Sign Up Here</h2>
+                        <h2 class="text-center mt-3 ">Sign Up Here</h2>
                         <div class="col-md-6">
                             <label for="validationCustom01" class="form-label">Enter Email:</label>
                             <input class="form-control col-10 mx-auto " placeholder="Enter-Email" type="text"
@@ -66,26 +66,7 @@
                                 Please enter Username
                             </div>
                         </div>
-
-                        <!-- <form> -->
-                        <div>
-                            <label class="text-center">Select gender:</label>
-                            <div class="form-check mt-1">
-                                  <input type="radio" class="form-check-input" id="male" name="gender" value="Male"
-                                    required="" />  
-                                <label class="form-check-label" for="male">Male</label>
-                            </div>
-                            <div class="form-check mt-1">
-                                  <input type="radio" class="form-check-input" id="female" name="gender" value="Female"
-                                    required="" />  
-                                <label class="form-check-label" for="female">Female</label>
-                            </div>
-                            <div class="invalid-feedback">
-                                Please select a valid state.
-                            </div>
-                        </div>
-
-                        <!-- </form> -->
+                        <div></div>
                         <div class="col-md-6 mt-1">
                             <label for="validationCustom3" class="form-label">Enter Password:</label>
                             <input class="form-control col-10 mx-auto " placeholder="Password" type="password"
@@ -115,6 +96,24 @@
                                 </div>
                             </div>
                         </div> -->
+
+                        <div>
+                            <label class="text-center">Select gender:</label>
+                            <div class="form-check mt-1">
+                                  <input type="radio" class="form-check-input" id="male" name="gender" value="Male"
+                                    required="" />  
+                                <label class="form-check-label" for="male">Male</label>
+                            </div>
+                            <div class="form-check mt-1">
+                                  <input type="radio" class="form-check-input" id="female" name="gender" value="Female"
+                                    required="" />  
+                                <label class="form-check-label" for="female">Female</label>
+                            </div>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
+                        </div>
+
                         <div class="text-center">
                             <a href="#" id="add-name-btn" class="btn btn-primary mt-0" type="submit">Sign Up</a><br>
                         </div>
@@ -123,7 +122,7 @@
             </div>
         </form><br><br>
         <div class="table-responsive">
-            <table id="table" class="table table-dark table-bordered overflow-auto">
+            <table id="table" class="table table-bordered overflow-auto">
                 <thead>
                     <th>Sr No.</th>
                     <th>ID</th>
@@ -179,12 +178,13 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </main><br><br>
+        </div><br><br><br>
+        <!-- </main> -->
 
-    <div class="card fixed-bottom text-center">
-        <h5 class="p-3 text-dark">Featured</h5>
-    </div>
+        <div class="card fixed-bottom text-center">
+            <h5 class="p-3 text-white">Featured</h5>
+        </div>
+    </main>
     <script src="index.js"></script>
 </body>
 

@@ -11,8 +11,10 @@ body {
 
 nav {
    margin: auto;
-    background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+   background: white;
+   background-color: black;
+    /* background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); */
     font-family: 'Playfair Display', serif;
 }
 
@@ -25,6 +27,7 @@ main {
     justify-content: space-between;
 
 }
+
 #add-name-btn{
     padding: 6px 30px 6px 30px;
 }
@@ -38,6 +41,8 @@ main {
 
 table {
     margin: 2px;
+    text-align: center;
+
 }
 
 table,
@@ -45,22 +50,24 @@ th,
 td {
     border-collapse: collapse;
     border: 1px solid black;
-    text-align: center;
+    padding: auto;
+    
 }
-
-th,
-td {
-    padding: 5px;
-    text-align: center;
+.table-responsive{
+    background-image: linear-gradient(-225deg, #b9ebdc 50%, #f0d4ea 50%);
+    
 }
-
 .p-3{
-    background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    background-color: black;
+    font-family: 'Playfair Display', serif;
+    /* background: white; */
+    /* background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
 }
+
 
 #update-row-btn{
-    padding: 6px 30px 6px 30px;
+     padding: 6px 30px 6px 30px;
 }
 
 @media screen and (max-width: 350px) {
