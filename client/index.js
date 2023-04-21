@@ -253,7 +253,7 @@ function insertRowIntoTable(data) {
   console.log(data);
   const table = document.querySelector("table tbody");
   const isTableData = table.querySelector(".no-data");
-  count = count + 1;
+  count = count + 1; 
   let tableHtml = "<tr>";
   tableHtml += `<td>${count}</td>`;
   for (var key in data) {
@@ -265,7 +265,7 @@ function insertRowIntoTable(data) {
     }
   }
 
-  tableHtml += `<td><button class="edit-row-btn btn btn-success" data-id=${data.id}>Edit-input-fields</td>`;
+  tableHtml += `<td><button class="edit-row-btn btn btn-success" data-id=${data.id} data-email="${email}" data-name="${name}" data-gender="${gender}" data-password="${password}" data-confirmpassword="${confirmpassword}>Edit-input-fields</td>`;
   tableHtml += `<td><button class="delete-row-btn btn btn-danger" data-id=${data.id}>Delete</td>`;
 
   tableHtml += "</tr>";
@@ -278,21 +278,21 @@ function insertRowIntoTable(data) {
   }
 }
 
-(() => {
-  'use strict'
+// (() => {
+//   'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
+//   // Fetch all the forms we want to apply custom Bootstrap validation styles to
+//   const forms = document.querySelectorAll('.needs-validation')
 
-  // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-              event.preventDefault()
-              event.stopPropagation()
-          }
+//   // Loop over them and prevent submission
+//   Array.from(forms).forEach(form => {
+//       form.addEventListener('submit', event => {
+//           if (!form.checkValidity()) {
+//               event.preventDefault()
+//               event.stopPropagation()
+//           }
 
-          form.classList.add('was-validated')
-      }, false)
-  })
-})()
+//           form.classList.add('was-validated')
+//       }, false)
+//   })
+// })()
