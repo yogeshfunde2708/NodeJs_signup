@@ -1,13 +1,3 @@
-// const { response } = require("express");
-
-// const { reset } = require("nodemon");
-
-// const { response } = require("express");
-
-// const { response } = require("express");
-
-// const { response } = require("express");
-
 document.addEventListener("DOMContentLoaded", function () {
   fetch("http://localhost:5000/getAll")
     .then((response) => response.json())
@@ -253,7 +243,7 @@ function insertRowIntoTable(data) {
   console.log(data);
   const table = document.querySelector("table tbody");
   const isTableData = table.querySelector(".no-data");
-  count = count + 1; 
+  count = count + 1;
   let tableHtml = "<tr>";
   tableHtml += `<td>${count}</td>`;
   for (var key in data) {
@@ -277,22 +267,3 @@ function insertRowIntoTable(data) {
     newRow.innerHTML = tableHtml;
   }
 }
-
-// (() => {
-//   'use strict'
-
-//   // Fetch all the forms we want to apply custom Bootstrap validation styles to
-//   const forms = document.querySelectorAll('.needs-validation')
-
-//   // Loop over them and prevent submission
-//   Array.from(forms).forEach(form => {
-//       form.addEventListener('submit', event => {
-//           if (!form.checkValidity()) {
-//               event.preventDefault()
-//               event.stopPropagation()
-//           }
-
-//           form.classList.add('was-validated')
-//       }, false)
-//   })
-// })()
