@@ -8,7 +8,13 @@ document
   .querySelector("table tbody")
   .addEventListener("click", function (event) {
     if (event.target.className === "delete-row-btn btn btn-danger") {
-      deleteRowById(event.target.dataset.id);
+
+     confirm("Are you sure you want to delete user?")
+     if(event.target.dataset.id){
+      deleteRowById(event.target.dataset.id)
+     }else{
+      deleteRowById(event.target.id.false)
+     }
     }
     // console.log(event.target.dataset)
     if (event.target.className === "edit-row-btn btn btn-success") {
@@ -149,9 +155,7 @@ addBtn.onclick = function () {
     genderSelect = "Female";
   }
   const passwordInput = document.querySelector("#password-input");
-  const confirmPasswordInput = document.querySelector(
-    "#confirm-password-input"
-  );
+  const confirmPasswordInput = document.querySelector("#confirm-password-input");
 
   const email = emailInput.value;
   const name = nameInput.value;
