@@ -13,7 +13,7 @@ document
      if(event.target.dataset.id){
       deleteRowById(event.target.dataset.id)
      }else{
-      deleteRowById(event.target.id.false)
+      deleteRowById(id.false)
      }
     }
     // console.log(event.target.dataset)
@@ -95,9 +95,7 @@ updateBtn.onclick = function () {
   }
 
   const updatePasswodInput = document.querySelector("#update-password-input");
-  const updateConfirmPasswordInput = document.querySelector(
-    "#update-confirm-password"
-  );
+  const updateConfirmPasswordInput = document.querySelector("#update-confirm-password" );
 
   if (updateNameInput.value == "") {
     alert("Please enter update name");
