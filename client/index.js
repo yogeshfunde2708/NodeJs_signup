@@ -9,12 +9,13 @@ document
   .addEventListener("click", function (event) {
     if (event.target.className === "delete-row-btn btn btn-danger") {
 
-     confirm("Are you sure you want to delete user?")
-     if(event.target.dataset.id){
+    //  confirm("Are you sure you want to delete user?")
+     if(event.target.dataset.id, confirm("Are you sure you want to delete user?")){
       deleteRowById(event.target.dataset.id)
-     }else{
-      deleteRowById(id.false)
      }
+    //  else{
+    //   deleteRowById(id.false)
+    //  }
     }
     // console.log(event.target.dataset)
     if (event.target.className === "edit-row-btn btn btn-success") {
