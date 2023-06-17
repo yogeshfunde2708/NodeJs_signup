@@ -258,7 +258,7 @@ function insertRowIntoTable(data, email, name, gender, password, confirmpassword
     }
   }
 
-  tableHtml += `<td><button class="edit-row-btn btn btn-success" data-id="${data.id}" data-email="${email}" data-name="${name}" data-gender="${gender}" data-password="${password}" data-confirmpassword="${confirmpassword}>Edit-input-fields</td>`;
+  tableHtml += `<td><button class="edit-row-btn btn btn-success" data-id="${data.id}" data-email="${email}" data-name="${name}" data-gender="${gender}" data-password="${password}" data-confirmpassword="${confirmpassword}">Edit-input-fields</td>`;
   tableHtml += `<td><button class="delete-row-btn btn btn-danger" data-id=${data.id}>Delete</td>`;
 
   tableHtml += "</tr>";
