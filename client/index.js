@@ -8,8 +8,6 @@ document
   .querySelector("table tbody")
   .addEventListener("click", function (event) {
     if (event.target.className === "delete-row-btn btn btn-danger") {
-
-    //  confirm("Are you sure you want to delete user?")
      if(event.target.dataset.id, confirm("Are you sure you want to delete user?")){
       deleteRowById(event.target.dataset.id)
      }
