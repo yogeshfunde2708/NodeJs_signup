@@ -91,7 +91,6 @@ class dbService {
       const response = await new Promise((resolve, reject) => {
         const query =
           "UPDATE names SET name = ?, email = ?,  gender = ?, password = ?, confirmpassword = ? WHERE id = ? ";
-
         connection.query(
           query,
           [name, email, gender, password, confirmpassword, id],
