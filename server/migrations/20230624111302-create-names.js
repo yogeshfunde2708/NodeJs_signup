@@ -9,22 +9,22 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      email: {
         type: Sequelize.STRING
       },
-      email: {
+      username: {
         type: Sequelize.STRING
       },
       gender: {
         type: Sequelize.STRING
       },
       date_added: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       password: {
         type: Sequelize.STRING
       },
-      confirm_password: {
+      confirmpassword: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -39,5 +39,6 @@ module.exports = {
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('names');
+    
   }
 };
