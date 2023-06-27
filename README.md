@@ -3,7 +3,7 @@ Sign Up Form
 input your detail email, username, gender and password to sign up to the page.
 
 Programming languages
-HTML CSS JAVASCRIPT Node.js Bootstrap MySQL
+HTML, CSS, JAVASCRIPT, Node.js, Bootstrap, MySQL
 
 Deployment
 
@@ -17,11 +17,9 @@ step 4:-Input the required field in login form. After the button was clicked the
 
 step 5:-Make any changes in your input field click "Edit-Input-Field" button,and Edit form will show in bottom of the table  and also you can delete your login input field to click the "Delete" button and also database data will be deleted.
 
-step 6:- Use sequelize that easy to work with the database, get the command in terminal "npm install sequelize" and "npm install sequelize-cli" after installation get "npx sequelize-cli init" command and then config file was created input your database information in config file to connect our database 
+step 6:- Use sequelize to get the command in terminal "npm install sequelize" and "npm install sequelize-cli" after installation get "npx sequelize-cli init" command.
 
-step 7:-Then create the migration to get command "npx sequelize-cli model:generate --name names --attributes email:string, username:string  and then model was created.
-
-step 8:- Then  migrate the model to get command "npx sequelize-cli db:migrate" and migrate the file and migration  table was created the migration is use to change the data model and deploy your changes to production by updating the database schema without having drop and re-create the database.
+step 7:- migrate the model to get command "npx sequelize-cli db:migrate" and migrate the file and migration  table was created.
 
 
 Installation
