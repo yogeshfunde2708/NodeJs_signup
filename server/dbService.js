@@ -44,7 +44,7 @@ class dbService {
       const insertId = await new Promise((resolve, reject) => {
         const query =
           "INSERT INTO names (email, name, gender, password, confirmpassword, date_added) VALUES (?, ?, ?, ?, ?,?);";
-
+          
         connection.query(
           query,
           [email, name, gender, password, confirmpassword, dateAdded],
