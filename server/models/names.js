@@ -21,6 +21,8 @@ module.exports = (sequelize, DataTypes) => {
     date_added: DataTypes.STRING,
     password: DataTypes.STRING,
     confirmpassword: DataTypes.STRING,
+    // createdAt:DataTypes.DATE,
+    // updatedAt:DataTypes.DATE,
     // username: DataTypes.STRING,
   }, {
     sequelize,

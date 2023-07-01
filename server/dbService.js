@@ -51,6 +51,7 @@ class dbService {
           (err, result) => {
             if (err) reject(new Error(err.message));
             resolve(result.insertId);
+            // console.log(err);
           }
         );
       });
