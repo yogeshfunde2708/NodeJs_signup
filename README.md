@@ -9,7 +9,7 @@ Deployment
 
 step 1:- Git clone (https://github.com/yogeshfunde2708/NodeJsProject1.git)
 
-step 2:-CD()
+step 2:-CD(NodeJsProject1)
 
 step 3:-Installation
 first install npm (npm install) 
