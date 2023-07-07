@@ -8,12 +8,14 @@ document
   .querySelector("table tbody")
   .addEventListener("click", function (event) {
     if (event.target.className === "delete-row-btn btn btn-danger") {
-     if(event.target.dataset.id, confirm("Are you sure you want to delete user?")){
-      deleteRowById(event.target.dataset.id)
-     }
-    //  else{
-    //   deleteRowById(id.false)
-    //  }
+      if (
+        (event.target.dataset.id,confirm("Are you sure you want to delete user?"))
+      ) {
+        deleteRowById(event.target.dataset.id);
+      }
+      //  else{
+      //   deleteRowById(id.false)
+      //  }
     }
     // console.log(event.target.dataset)
     if (event.target.className === "edit-row-btn btn btn-success") {
@@ -31,13 +33,21 @@ document
 
 const updateBtn = document.querySelector("#update-row-btn");
 const searchBtn = document.querySelector("#search-btn");
+const clearBtn = document.querySelector("#clear-btn");
 
 searchBtn.onclick = function () {
   const searchValue = document.querySelector("#search-input").value;
   fetch("http://localhost:5000/search/" + searchValue)
     .then((response) => response.json())
     .then((data) => loadHTMLTable(data["data"]));
-  document.querySelector("#search-input").value = "";
+  // document.querySelector("#search-input").value = "";
+};
+
+clearBtn.onclick = function () {
+  const clearValue = document.querySelector("#search-input").value = "";
+  fetch("http://localhost:5000/getAll")
+  .then((response) => response.json())
+  .then((data) => loadHTMLTable(data["data"]));
 };
 
 function deleteRowById(id) {
@@ -93,7 +103,9 @@ updateBtn.onclick = function () {
   }
 
   const updatePasswodInput = document.querySelector("#update-password-input");
-  const updateConfirmPasswordInput = document.querySelector("#update-confirm-password" );
+  const updateConfirmPasswordInput = document.querySelector(
+    "#update-confirm-password"
+  );
 
   if (updateNameInput.value == "") {
     alert("Please enter update name");
@@ -151,7 +163,9 @@ addBtn.onclick = function () {
     genderSelect = "Female";
   }
   const passwordInput = document.querySelector("#password-input");
-  const confirmPasswordInput = document.querySelector("#confirm-password-input");
+  const confirmPasswordInput = document.querySelector(
+    "#confirm-password-input"
+  );
 
   const email = emailInput.value;
   const name = nameInput.value;

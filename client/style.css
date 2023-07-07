@@ -11,7 +11,7 @@ nav {
    margin: auto;
    background: white;
    background-color: black;
-    font-family: 'Playfair Display', serif;
+   font-family: 'Playfair Display', serif;
 }
 
 main {
@@ -22,7 +22,9 @@ main {
     justify-content: space-between;
 
 }
-
+#clear-btn{
+   margin-left: 10px;
+}
 #add-name-btn{
     padding: 6px 30px 6px 30px;
 }
