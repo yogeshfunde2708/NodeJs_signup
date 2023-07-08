@@ -48,6 +48,8 @@ clearBtn.onclick = function () {
   fetch("http://localhost:5000/getAll")
   .then((response) => response.json())
   .then((data) => loadHTMLTable(data["data"]));
+  count = 0;
+  
 };
 
 function deleteRowById(id) {
