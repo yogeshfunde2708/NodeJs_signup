@@ -41,6 +41,7 @@ searchBtn.onclick = function () {
     .then((response) => response.json())
     .then((data) => loadHTMLTable(data["data"]));
   // document.querySelector("#search-input").value = "";
+  count = 0;
 };
 
 clearBtn.onclick = function () {
