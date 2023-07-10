@@ -7,13 +7,13 @@ HTML, CSS, JAVASCRIPT, Node.js, Bootstrap, MySQL
 
 Deployment
 
-step 1:- Git clone (https://github.com/yogeshfunde2708/NodeJsProject1.git)
+step 1:- Git clone https://github.com/yogeshfunde2708/NodeJsProject1.git
 
-step 2:-CD(NodeJsProject1)
+step 2:-CD NodeJsProject1
 
 step 3:-Installation
-first install npm (npm install) 
-and the packages of npm will also install to get the command in terminal:-(npm install express, dotenv, cors, mysql2, sequelize, sequelize-cli)
+run: npm install
+run: npm install express, dotenv, cors, mysql2, sequelize, sequelize-cli
 
 step 4:-Update your database name, user and password with your own in the (env) and (config/config.json) file 
 
