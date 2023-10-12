@@ -13,11 +13,7 @@ document
       ) {
         deleteRowById(event.target.dataset.id);
       }
-      //  else{
-      //   deleteRowById(id.false)
-      //  }
     }
-    // console.log(event.target.dataset)
     if (event.target.className === "edit-row-btn btn btn-success") {
       handleEditRow(
         event.target.dataset.id,
@@ -40,7 +36,6 @@ searchBtn.onclick = function () {
   fetch("http://localhost:5000/search/" + searchValue)
     .then((response) => response.json())
     .then((data) => loadHTMLTable(data["data"]));
-  // document.querySelector("#search-input").value = "";
   count = 0;
 };
 
@@ -68,7 +63,6 @@ function deleteRowById(id) {
 function handleEditRow(id, name, email, gender, password, confirmpassword) {
   const updateSection = document.querySelector("#update-row");
   updateSection.hidden = false;
-  // console.log(gender);
   document.querySelector("#update-name-input").dataset.id = id;
   document.querySelector("#update-name-input").value = name;
   console.log(name);
@@ -172,14 +166,12 @@ addBtn.onclick = function () {
 
   const email = emailInput.value;
   const name = nameInput.value;
-  // const gender = genderSelect;
   const password = passwordInput.value;
   const confirmpassword = confirmPasswordInput.value;
 
   console.log(email);
   console.log(name);
   console.log(genderSelect);
-  // console.log(gender);
   console.log(password);
   console.log(confirmpassword);
   if (emailInput.value == "") {
